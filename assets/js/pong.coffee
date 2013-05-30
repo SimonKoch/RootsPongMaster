@@ -100,7 +100,7 @@ class window.PongApp
     setTimeout =>
       # Adjust for player key input
       @entities[0].decelY() if @aPressed
-      @entities[0].accelY() if @zPressed
+      @entities[0].accelY() if @yPressed
       @entities[1].decelY() if @upPressed
       @entities[1].accelY() if @downPressed
 
@@ -157,7 +157,7 @@ class window.PongApp
       switch e.keyCode
         when 40 then @downPressed = true
         when 38 then @upPressed = true
-        when 90 then @zPressed = true
+        when 89 then @yPressed = true
         when 65 then @aPressed = true
     , false
   
@@ -166,7 +166,7 @@ class window.PongApp
         when 27 then @cleanup()
         when 40 then @downPressed = false
         when 38 then @upPressed = false
-        when 90 then @zPressed = false
+        when 89 then @yPressed = false
         when 65 then @aPressed = false
     , false
 
